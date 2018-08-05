@@ -13,20 +13,20 @@ define Package/reverseproxy
   TITLE:=reverse proxy meta package
 endef
 
+define Package/reverseproxy/description
+  LILiK's reverse proxy meta-package
+endef
+
 Package/reverseproxy/conffiles = $(Package/nginx/conffiles)
 
-define Package/reverseproxy/Compile
-  true
+define Package/Configure
+endef
+
+define Package/Compile
 endef
 
 define Package/reverseproxy/install
   $(INSTALL_DIR) $(1)/etc/nginx/map.conf.d
 endef
 
-define Package/reverseproxy/description
-  LILiK's reverse proxy meta-package
-endef
-
-
-# This command is always the last, it uses the definitions and variables we give above in order to get the job done
 $(eval $(call BuildPackage,reverseproxy))
