@@ -19,10 +19,10 @@ endef
 
 Package/reverseproxy/conffiles = $(Package/nginx/conffiles)
 
-define Package/Configure
+define Build/Configure
 endef
 
-define Package/Compile
+define Build/Compile
 endef
 
 define Package/reverseproxy/install
