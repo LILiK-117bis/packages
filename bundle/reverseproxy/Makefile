@@ -9,7 +9,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/reverseproxy
   SECTION:=meta
   CATEGORY:=LILiK
-  DEPENDS:=+nginx-all
+  DEPENDS:=+nginx-all-module
   TITLE:=reverse proxy meta package
 endef
 
