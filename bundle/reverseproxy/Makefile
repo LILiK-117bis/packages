@@ -26,7 +26,9 @@ define Build/Compile
 endef
 
 define Package/reverseproxy/install
+  $(INSTALL_DIR) $(1)/etc/nginx/http.conf.d
   $(INSTALL_DIR) $(1)/etc/nginx/map.conf.d
+  $(INSTALL_DIR) $(1)/etc/nginx/upstream.conf.d
 endef
 
 $(eval $(call BuildPackage,reverseproxy))
