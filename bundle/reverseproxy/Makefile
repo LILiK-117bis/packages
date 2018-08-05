@@ -15,6 +15,10 @@ endef
 
 Package/reverseproxy/conffiles = $(Package/nginx/conffiles)
 
+define Package/reverseproxy/build
+  true
+endef
+
 define Package/reverseproxy/install
   $(INSTALL_DIR) $(1)/etc/nginx/map.conf.d
 endef
