@@ -17,7 +17,7 @@ Package/reverseproxy/conffiles = $(Package/nginx/conffiles)
 
 define Package/reverseproxy/install
   $(INSTALL_DIR) $(1)/etc/nginx/map.conf.d
-end
+endef
 
 define Package/reverseproxy/description
   LILiK's reverse proxy meta-package
