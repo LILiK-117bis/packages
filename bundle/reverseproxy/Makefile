@@ -15,7 +15,7 @@ endef
 
 Package/reverseproxy/conffiles = $(Package/nginx/conffiles)
 
-define Package/reverseproxy/build
+define Package/reverseproxy/Compile
   true
 endef
 
