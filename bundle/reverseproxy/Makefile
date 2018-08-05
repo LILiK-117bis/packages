@@ -1,22 +1,22 @@
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=lilik
+PKG_NAME:=reverseproxy
 PKG_VERSION:=1.0
 PKG_RELEASE:=1
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/lilik
+define Package/reverseproxy
   SECTION:=meta
   CATEGORY:=LILiK
-  DEPENDS:=+ca-bundle +ca-certificates +dnsmasq-full +reverseproxy +ansible
-  TITLE:=LILiK meta-package
+  DEPENDS:=+nginx-all
+  TITLE:=reverse proxy meta package
 endef
 
-define Package/lilik/description
-  LILiK Meta-package all our OpenWRT needs
+define Package/reverseproxy/description
+  LILiK's reverse proxy meta-package
 endef
 
 
 # This command is always the last, it uses the definitions and variables we give above in order to get the job done
-$(eval $(call BuildPackage,lilik))
+$(eval $(call BuildPackage,reverseproxy))

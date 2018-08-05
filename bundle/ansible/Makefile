@@ -7,9 +7,9 @@ PKG_RELEASE:=1
 include $(INCLUDE_DIR)/package.mk
 
 define Package/ansible
-  SECTION:=bundles
-  CATEGORY:=Bundles
-  DEPENDS:=+python +python3
+  SECTION:=meta
+  CATEGORY:=LILiK
+  DEPENDS:=+python +python3 +openssh-server +openssh-clients
   TITLE:=requirements to configure OpenWRT using ansible
 endef
 
