@@ -18,6 +18,9 @@ LILiK's reverse proxy meta-package
 
 endef
 
+define Build/Compile
+endef
+
 define Package/reverse-proxy/install
 	$(INSTALL_DIR) $(1)/etc/nginx/http.conf.d
 	$(INSTALL_DIR) $(1)/etc/nginx/map.conf.d
