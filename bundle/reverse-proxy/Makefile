@@ -17,12 +17,6 @@ define Package/reverse-proxy/description
 LILiK's reverse proxy meta-package
 endef
 
-define Build/Configure
-endef
-
-define Build/Compile
-endef
-
 define Package/reverse-proxy/install
   $(INSTALL_DIR) $(1)/etc/nginx/http.conf.d
   $(INSTALL_DIR) $(1)/etc/nginx/map.conf.d
