@@ -13,6 +13,12 @@ define Package/reverseproxy
   TITLE:=reverse proxy meta package
 endef
 
+Package/reverseproxy/conffiles = $(Package/nginx/conffiles)
+
+define Package/reverseproxy/install
+  $(INSTALL_DIR) $(1)/etc/nginx/map.conf.d
+end
+
 define Package/reverseproxy/description
   LILiK's reverse proxy meta-package
 endef
