@@ -9,7 +9,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/ansible
   SECTION:=meta
   CATEGORY:=LILiK
-  DEPENDS:=+python +python3 +openssh-server +openssh-clients
+  DEPENDS:=+python +python3 +openssh-server +openssh-client +openssh-client-utils
   TITLE:=requirements to configure OpenWRT using ansible
 endef
 
