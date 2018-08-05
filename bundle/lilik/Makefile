@@ -9,7 +9,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/lilik
   SECTION:=meta
   CATEGORY:=LILiK
-  DEPENDS:=+ca-bundle +ca-certificates +dnsmasq-full +reverseproxy +ansible +openssl-util
+  DEPENDS:=+ca-bundle +ca-certificates +dnsmasq-full +reverse-proxy +ansible +openssl-util
   TITLE:=LILiK meta-package
 endef
 
@@ -18,5 +18,4 @@ define Package/lilik/description
 endef
 
 
-# This command is always the last, it uses the definitions and variables we give above in order to get the job done
 $(eval $(call BuildPackage,lilik))

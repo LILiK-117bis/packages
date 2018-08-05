@@ -1,23 +1,21 @@
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=reverseproxy
+PKG_NAME:=reverse-proxy
 PKG_VERSION:=1.0
 PKG_RELEASE:=1
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/reverseproxy
+define Package/reverse-proxy
   SECTION:=meta
   CATEGORY:=LILiK
   DEPENDS:=+nginx-all-module
   TITLE:=reverse proxy meta package
 endef
 
-define Package/reverseproxy/description
-  LILiK's reverse proxy meta-package
+define Package/reverse-proxy/description
+LILiK's reverse proxy meta-package
 endef
-
-Package/reverseproxy/conffiles = $(Package/nginx/conffiles)
 
 define Build/Configure
 endef
@@ -25,10 +23,10 @@ endef
 define Build/Compile
 endef
 
-define Package/reverseproxy/install
+define Package/reverse-proxy/install
   $(INSTALL_DIR) $(1)/etc/nginx/http.conf.d
   $(INSTALL_DIR) $(1)/etc/nginx/map.conf.d
   $(INSTALL_DIR) $(1)/etc/nginx/upstream.conf.d
 endef
 
-$(eval $(call BuildPackage,reverseproxy))
+$(eval $(call BuildPackage,reverse-proxy))
