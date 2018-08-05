@@ -9,7 +9,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/lilik
 	SECTION:=meta
 	CATEGORY:=LILiK
-	DEPENDS:=+ca-bundle +ca-certificates +dnsmasq-full +reverse-proxy +ansible +openssl-util
+	DEPENDS:=+ca-bundle +ca-certificates +dnsmasq-full +reverse-proxy +ansible +openssl-util +editors
 	TITLE:=LILiK meta-package
 endef
 
