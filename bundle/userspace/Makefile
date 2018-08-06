@@ -1,3 +1,5 @@
+# vim: set noexpandtab:
+
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=userspace
